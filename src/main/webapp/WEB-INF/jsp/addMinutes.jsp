@@ -19,6 +19,9 @@
 				<td>
 					<form:input path="minutes"/>
 				</td>
+				<td>
+					<form:input path="seconds"/>
+				</td>
 			</tr>
 			<tr>
 				<td colspan="2">
