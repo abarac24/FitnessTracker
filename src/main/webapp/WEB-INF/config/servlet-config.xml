@@ -15,7 +15,7 @@
 	<mvc:annotation-driven/> 
 	<context:component-scan base-package="com.pluralsight.controller"/>
 	
-	<mvc:resources location="pdfs" mapping="/pdfs/**"></mvc:resources>
+	<mvc:resources location="pdfs" mapping="/pdfs/**" />
 	
     <!-- bean definitions here -->
 	
@@ -24,6 +24,6 @@
 		<property name="suffix" value=".jsp"></property>
 	</bean>
 	
-	
+	<bean class="org.springframework.web.servlet.view.BeanNameViewResolver" p:order="0" />
 	
 </beans>
