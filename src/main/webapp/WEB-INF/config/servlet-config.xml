@@ -17,12 +17,24 @@
 	
 	<mvc:resources location="/pdfs/" mapping="/pdfs/**" />
 	
-    <!-- bean definitions here -->
+	<!-- Bean for app localization -->
+	<mvc:interceptors>
+		<bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor" p:paramName="language"></bean>
+	</mvc:interceptors>
+	<bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver"  p:defaultLocale="ka" />
 	
+	<!--Bean for massages properties-->
+	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource" p:basename="messages"  />
+	
+    <!-- bean definitions here -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/jsp/"></property>
 		<property name="suffix" value=".jsp"></property>
 	</bean>
+	
+	
+	
+	
 	
 	<bean class="org.springframework.web.servlet.view.BeanNameViewResolver" p:order="0" />
 	
