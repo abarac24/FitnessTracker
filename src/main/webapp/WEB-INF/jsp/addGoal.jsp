@@ -12,14 +12,16 @@
 </head>
 <body>
 
-
 <form:form commandName="goal">
+	
+	<form:errors path="*" cssClass="errorBlock" element="div"></form:errors>
 	
 	<table>
 		<tr>
 			<td>Enter Minutes:</td>
 			<td>
 				<form:input path="minutes"/>
+				<form:errors path="minutes" cssClass="errorBlock" element="div"></form:errors>
 			</td>
 		</tr>
 		<tr>
