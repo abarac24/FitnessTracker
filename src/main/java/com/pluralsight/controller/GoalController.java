@@ -25,7 +25,7 @@ public class GoalController {
 		
 		return "addGoal";
 	}
-	
+	 
 	@RequestMapping( value="addGoal", method=RequestMethod.POST)
 	public String updateGoal( @Valid @ModelAttribute("goal") goal goal, BindingResult result ){
 		
