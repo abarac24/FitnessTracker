@@ -35,7 +35,6 @@ public class ExrciseServiceImpl implements ExerciseService {
 		Activity run2 = new Activity();
 		run2.setDesc("Test 3");
 		list.add(run2);
-		
 		return list;
 		
 	}
