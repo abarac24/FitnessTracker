@@ -11,8 +11,7 @@ public class HelloController {
 	@RequestMapping( value="/greeting" )
 	public String sayHello( Model model ){
 		
-		model.addAttribute("greeting", "Giorgi Bibilashvili");
-		
+		model.addAttribute("greeting", "Giorgi Bibilashvili");		
 		return "hello";
 	}
 

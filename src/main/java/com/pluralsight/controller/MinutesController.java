@@ -12,7 +12,6 @@ import com.pluralsight.model.Activity;
 import com.pluralsight.model.Exercise;
 import com.pluralsight.model.goal;
 import com.pluralsight.services.ExerciseService;
-import com.pluralsight.services.ExrciseServiceImpl;
 
 import java.util.List;
 
@@ -29,6 +28,7 @@ public class MinutesController {
 	public String addMinutes( @ModelAttribute("exercise") Exercise exercise ){
 		return "addMinutes";
 	}
+	
 	
 	@RequestMapping(value="/addMinutes", method=RequestMethod.POST)
 	public String addMoreMinutes( @Valid @ModelAttribute("exercise") Exercise exercise, HttpSession session, BindingResult result ){

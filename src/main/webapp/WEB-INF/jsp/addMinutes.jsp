@@ -29,6 +29,9 @@
 				<td>
 					<form:input path="seconds"/>
 				</td>
+				<td>
+					<form:input path="activity"/>
+				</td>
 			</tr>
 			<tr>
 				<td colspan="2">

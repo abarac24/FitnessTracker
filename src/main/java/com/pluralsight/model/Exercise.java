@@ -22,7 +22,7 @@ public class Exercise {
 	private int seconds;
 
 	@NotNull
-	private String activity;
+	private String activity;	
 	
 	@ManyToOne()
 	private goal goal;
