@@ -8,6 +8,7 @@ import javax.persistence.Query;
 
 import org.springframework.stereotype.Repository;
 
+import com.pluralsight.model.GoalReport;
 import com.pluralsight.model.goal;
 
 @Repository("GoalRepository")
@@ -32,8 +33,16 @@ public class GoalRepositoryImpl implements GoalRepository {
 		 * 
 		 * */
 		Query query = em.createQuery("Select g from goal g");		
-		List goals = query.getResultList();
-		
+		List goals = query.getResultList();		
 		return goals;
+	}
+	
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	public List<GoalReport> loadAllGoalReports() {
+		
+		Query query = em.createQuery("Select new com.pluralsight.model.GoalReport(g.minutes) " + 												
+									 "from goal g, Exercise e where g.id = e.goal.id");			
+		List goalReports = query.getResultList();			
+		return goalReports;
 	}
 }

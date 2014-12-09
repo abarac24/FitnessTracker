@@ -27,7 +27,7 @@ public class goal{
 	@Column(name="minutes")
 	private String minutes;
 	
-	@OneToMany(mappedBy="goal", cascade=CascadeType.ALL, fetch=FetchType.EAGER)
+	@OneToMany(mappedBy="goal", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
 	private List<Exercise> exercises = new ArrayList<Exercise>();
 	
 	public List<Exercise> getExercises() {
