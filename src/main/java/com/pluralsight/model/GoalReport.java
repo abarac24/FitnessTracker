@@ -2,14 +2,20 @@ package com.pluralsight.model;
 
 public class GoalReport {
 	
-	private int goalMinutes;
+	private Long id;
+	
+	private String goalMinutes;
 	private int exerciseMinutes;
 	private String exerciseActivity;
 	
-	public GoalReport( int goalMinutes ){
+	public GoalReport(){
+		
+	}
+	
+	public GoalReport( String goalMinutes, int exerciseMinutes, String exerciseActivity ){
 		this.goalMinutes = goalMinutes;
-		//this.exerciseMinutes = exerciseMinutes;
-		//this.exerciseActivity = exerciseActivity;
+		this.exerciseMinutes = exerciseMinutes;
+		this.exerciseActivity = exerciseActivity;
 	}
 	
 	public String getExerciseActivity() {
@@ -20,8 +26,12 @@ public class GoalReport {
 		return exerciseMinutes;
 	}
 	
-	public int getGoalMinutes() {
+	public String getGoalMinutes() {
 		return goalMinutes;
+	}
+	
+	public Long getId() {
+		return id;
 	}
 	
 	public void setExerciseActivity(String exerciseActivity) {
@@ -31,9 +41,13 @@ public class GoalReport {
 	public void setExerciseMinutes(int exerciseMinutes) {
 		this.exerciseMinutes = exerciseMinutes;
 	}
-	
-	public void setGoalMinutes(int goalMinutes) {
+
+	public void setGoalMinutes(String goalMinutes) {
 		this.goalMinutes = goalMinutes;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 	
 }

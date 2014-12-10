@@ -3,9 +3,6 @@ package com.pluralsight.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import antlr.collections.List;
-
 import com.pluralsight.model.GoalReport;
 import com.pluralsight.model.goal;
 import com.pluralsight.repository.GoalRepository;

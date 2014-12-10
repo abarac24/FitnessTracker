@@ -17,9 +17,9 @@
 			<th>Exercise Minutes</th>
 			<th>Activity</th>
 		</tr>
-		<c:forEach items="${goalReports}" var="goalReport">
+		<c:forEach items="${goalReports}" var="goalReports">
 			<tr>
-				<th>${goalReports.goalminutes}</th>
+				<th>${goalReports.goalMinutes}</th>
 				<th>${goalReports.exerciseMinutes}</th>
 				<th>${goalReports.exerciseActivity}</th>
 			</tr>

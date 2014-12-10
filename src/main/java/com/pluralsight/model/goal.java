@@ -9,6 +9,8 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -17,7 +19,13 @@ import org.hibernate.validator.constraints.Range;
 
 @Entity
 @Table(name="goals")
+@NamedQueries({
+	@NamedQuery(name=goal.FIND_GOAL_REPORTS, query= "Select new com.pluralsight.model.GoalReport(g.minutes, e.minutes, e.activity) " + 												
+			 										"from goal g, Exercise e where g.id = e.goal.id" )
+})
 public class goal{
+	
+	public static final String FIND_GOAL_REPORTS = "findGoalReports";
 	
 	@Id
 	@GeneratedValue
