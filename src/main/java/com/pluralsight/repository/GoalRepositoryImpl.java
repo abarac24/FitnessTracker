@@ -41,7 +41,7 @@ public class GoalRepositoryImpl implements GoalRepository {
 		List goals = query.getResultList();		
 		return goals;
 	}
-	
+	 
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public List<GoalReport> loadAllGoalReports() {
 		
